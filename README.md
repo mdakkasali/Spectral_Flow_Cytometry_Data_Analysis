@@ -2,125 +2,161 @@
 
 ## Publication Summary
 
-**This repository accompanies the publication:**
+This repository accompanies the paper:
 
-### Development of a Spectral Flow Cytometry Analysis Pipeline for High-dimensional Immune Cell Characterization
+**"Development of a Spectral Flow Cytometry Analysis Pipeline for High-dimensional Immune Cell Characterization"**
 
-*Published in the Journal of Immunology (2024)*
-
-**Contributors:** [Note: Please update with actual author names from the publication]
-
----
+Published in *The Journal of Immunology*, December 1, 2024.
 
 ## Citation
 
-**Title:** Development of a Spectral Flow Cytometry Analysis Pipeline for High-dimensional Immune Cell Characterization
+**Authors:** Donald Vardaman, III; Md Akkas Ali; Md Hasanul Banna Siam; Chase Bolding; Harrison Tidwell; Holly R Stephens; Mallikarjun Patil; Daniel J Tyrrell
 
-**Authors:** [Please update with complete author list from publication]
-
-**Journal:** Journal of Immunology
+**Journal:** The Journal of Immunology
 
 **Year:** 2024
 
-**Volume:** [Please update with actual volume]
+**Date:** December 1, 2024
 
-**Pages:** [Please update with actual page range]
+**DOI:** 10.4049/jimmunol.2400370
 
-**DOI:** [Please update with actual DOI]
-
-**Open Access PDF:** [Please update with link to open-access PDF]
+**Open Access PDF:** [Link to PDF](https://academic.oup.com/jimmunol/article-pdf/213/11/1713/61496676/ji2400370.pdf)
 
 ---
 
-## Repository Purpose
+## Code Architecture
 
-This repository provides the comprehensive analysis pipeline, annotated Jupyter Notebooks, and links to the Figshare dataset, as described in the manuscript. The pipeline is designed to enhance the interrogation of high-dimensional immune cell data through spectral flow cytometry, addressing the complexities associated with large antibody panels and traditional bi-axial gating strategies.
+### Repository Structure
 
-### Key Resources Included:
-- Analysis pipeline implementation
-- Annotated Jupyter Notebooks with step-by-step analysis
-- Links to associated Figshare datasets
-- Reproducible workflows for high-dimensional immune cell characterization
+- **Jupyter Notebooks**: Interactive analysis workflows with step-by-step documentation
+  - `4_16_24_spleen_channel-Copy1.ipynb`: Main analysis notebook
+  - Additional supporting notebooks for specialized analyses
+- **Data Directory**: Organized storage for spectral flow cytometry datasets
+- **Utilities**: Helper scripts and functions for data processing
+- **requirements.txt**: Complete list of Python dependencies
+- **Documentation**: Comprehensive guides and method descriptions
+
+### Key Libraries and Packages
+
+- **Python**: Core programming language (version 3.x)
+- **pandas**: Data manipulation and analysis
+- **numpy**: Numerical computing and array operations
+- **scanpy**: Single-cell analysis toolkit adapted for flow cytometry
+- **matplotlib**: Data visualization and plotting
+- **seaborn**: Statistical data visualization
+- **scikit-learn**: Machine learning algorithms for clustering and dimensionality reduction
+- **flowio**: Flow cytometry file reading and processing
+- **anndata**: Annotated data matrices for high-dimensional analysis
+
+### Analysis Workflow
+
+1. **Data Loading**: Import spectral flow cytometry files (.fcs format)
+2. **Preprocessing**: Quality control, filtering, and initial data cleaning
+3. **Batch Correction**: Harmonization across experimental batches
+4. **Clustering**: Unsupervised identification of immune cell populations
+5. **Statistical Analysis**: Differential expression and population comparisons
+6. **Visualization**: Generation of publication-ready figures and plots
 
 ---
 
-## Methods Summary
+## Methods
 
-The analysis pipeline encompasses the following key methodological steps as detailed in the published manuscript:
+The analysis pipeline reflects the methodological approach detailed in the publication:
 
 ### 1. Sample Preparation
-- [Please update with specific sample prep methods from paper]
+- Tissue processing and cell isolation protocols
+- Antibody panel design and optimization
+- Sample staining and fixation procedures
 
 ### 2. Spectral Flow Cytometry
-- [Please update with cytometry methods from paper]
+- Multi-parameter spectral flow cytometry data acquisition
+- High-dimensional immune cell characterization
+- Quality control measures for spectral data
 
-### 3. Data Handling & Processing
-- Data import and quality control
-- Initial preprocessing and filtering
+### 3. Data Processing
+- Raw data import and initial quality assessment
+- Compensation and spectral unmixing
+- Event filtering and debris removal
 
-### 4. Batch Correction
-- [Please update with specific batch correction methods from paper]
+### 4. Quality Control
+- Batch effect identification and assessment
+- Sample quality metrics evaluation
+- Data integrity validation
 
 ### 5. Clustering Analysis
-- Unsupervised clustering approaches
-- Dimensionality reduction techniques
+- Unsupervised clustering algorithms (e.g., Leiden, Louvain)
+- Dimensionality reduction techniques (UMAP, t-SNE)
+- Cell population identification and annotation
 
 ### 6. Statistical Analysis
-- Differential expression analysis
-- Advanced statistical techniques for high-dimensional data
+- Differential abundance testing
+- Marker expression analysis
+- Statistical significance assessment
+- Multiple comparison corrections
 
 ---
 
-## Key Features
-
-- **High-Dimensional Analysis:** Supports complex datasets with up to 50 fluorescently labeled antibodies
-- **Customizable Panels:** Easily configurable for various immune cell profiling needs
-- **Advanced Statistical Tools:** Implements sophisticated statistical techniques to extract meaningful insights from spectral data
-- **User-Friendly Interface:** Utilizes Jupyter Notebooks for an accessible and interactive user experience
-- **Reproducible Workflows:** Complete pipeline for replicating published results
-
----
-
-## Reproducing Results
+## Usage Instructions
 
 ### Prerequisites
-- Python 3.x
-- Jupyter Notebook environment
+
+- Python 3.8 or higher
+- Jupyter Notebook or JupyterLab environment
+- Sufficient RAM (>= 8GB recommended for large datasets)
 - Required Python packages (see requirements.txt)
 
-### Steps to Reproduce
-1. Clone this repository
-2. Download the associated dataset from Figshare [Please update with actual Figshare link]
-3. Install required dependencies
-4. Open and run the provided Jupyter Notebooks in sequence
-5. Follow the annotated analysis pipeline
+### Installation
 
-### Notebooks Included
-- `4_16_24_spleen_channel-Copy1.ipynb`: Main analysis notebook
-- Additional supporting notebooks and scripts
+1. Clone this repository:
+   ```bash
+   git clone https://github.com/mdakkasali/Spectral_Flow_Cytometry_Data_Analysis.git
+   cd Spectral_Flow_Cytometry_Data_Analysis
+   ```
+
+2. Install required dependencies:
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+3. Download the associated dataset from Figshare (link to be provided)
+
+### Reproduction Steps
+
+1. **Environment Setup**: Ensure all dependencies are installed
+2. **Data Preparation**: Place downloaded datasets in the appropriate data directory
+3. **Sequential Analysis**: Execute Jupyter notebooks in the recommended order:
+   - Start with the main analysis notebook
+   - Follow the annotated workflow step-by-step
+   - Examine intermediate results and quality control outputs
+4. **Parameter Customization**: Modify analysis parameters as needed for your specific dataset
+5. **Results Generation**: Generate figures and statistical outputs matching the publication
 
 ---
 
-## Acknowledgements & Funding
+## Acknowledgments and Funding
 
-[Please update this section with the specific acknowledgements and funding information from the published paper, including:
-- Funding agency names and grant numbers
-- Institutional acknowledgements
-- Technical support acknowledgements
-- Any other credits as listed in the publication]
+*[Placeholder for grant/funding agency information to be filled based on publication details]*
+
+We acknowledge the support of [funding agencies and grant numbers], institutional resources, and technical assistance that made this research possible. Detailed acknowledgments can be found in the published manuscript.
 
 ---
 
 ## Contact
 
-For questions regarding this repository or the associated publication, please contact the corresponding author or create an issue in this repository.
+For questions regarding this repository or the associated publication, please:
+
+- **Create an issue** in this GitHub repository for technical questions
+- **Contact the corresponding author** for methodological inquiries
+- **Email**: [Contact information from publication]
+
+We encourage users to report bugs, suggest improvements, and contribute to the ongoing development of this analysis pipeline.
 
 ---
 
 ## License
 
-[Please update with appropriate license information]
+This repository supports open science and reproducible research in immunology and flow cytometry analysis. Please refer to the LICENSE file for specific usage terms.
 
 ---
 
-*This repository supports open science and reproducible research in immunology and flow cytometry analysis.*
+*This repository provides comprehensive tools for spectral flow cytometry analysis, enabling researchers to reproduce the methods described in our publication and apply them to their own high-dimensional immune profiling studies.*
